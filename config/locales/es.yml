@@ -14,6 +14,7 @@ es:
         title: 'Título'
         context: 'Contexto'
         created_at: 'Fecha creación'
+        image: 'Imagen'
     errors:
       models:
         notice:
@@ -24,6 +25,8 @@ es:
             context:
               blank: 'no puede ser vacío'
               too_short: 'debe ser al menos de 50  caracteres'
+            image:
+              format: 'formato incorrecto'
   time:
     formats:
       long: '%d de %B de %Y'
