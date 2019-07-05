@@ -33,6 +33,8 @@ gem 'cancancan'
 gem 'draper'
 gem 'pundit'
 
+gem 'mini_magick'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
