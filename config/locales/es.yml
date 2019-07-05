@@ -1,0 +1,72 @@
+es:
+  activerecord:
+    models:
+      admin_user: 'Usuario Administrador'
+    attributes:
+      admin_user:
+        email: 'Email'
+        created_at: 'Fecha creación'
+        current_sign_in_at: 'Conexión'
+        sign_in_count: 'Cantidad de ingresos'
+        updated_at: 'Ultima actualización'
+  time:
+    formats:
+      long: '%d de %B de %Y'
+      short: '%d de %B - %Y'
+  date:
+    abbr_day_names:
+    - dom
+    - lun
+    - mar
+    - mié
+    - jue
+    - vie
+    - sáb
+    abbr_month_names:
+    -
+    - ene
+    - feb
+    - mar
+    - abr
+    - may
+    - jun
+    - jul
+    - ago
+    - sep
+    - oct
+    - nov
+    - dic
+    day_names:
+    - domingo
+    - lunes
+    - martes
+    - miércoles
+    - jueves
+    - viernes
+    - sábado
+    formats:
+      default: ! '%d/%m/%Y'
+      long: ! '%d de %B de %Y'
+      short: ! '%d de %b'
+    month_names:
+    -
+    - enero
+    - febrero
+    - marzo
+    - abril
+    - mayo
+    - junio
+    - julio
+    - agosto
+    - septiembre
+    - octubre
+    - noviembre
+    - diciembre
+    order:
+    - :day
+    - :month
+    - :year
+  will_paginate:
+    previous_label: '&#8592; Aterior'
+    next_label: 'Siguiente &#8594;'
+    page_gap: '&hellip;'
