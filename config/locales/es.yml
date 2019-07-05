@@ -2,6 +2,7 @@ es:
   activerecord:
     models:
       admin_user: 'Usuario Administrador'
+      notice: 'Noticia'
     attributes:
       admin_user:
         email: 'Email'
@@ -9,6 +10,20 @@ es:
         current_sign_in_at: 'Conexión'
         sign_in_count: 'Cantidad de ingresos'
         updated_at: 'Ultima actualización'
+      notice:
+        title: 'Título'
+        context: 'Contexto'
+        created_at: 'Fecha creación'
+    errors:
+      models:
+        notice:
+          attributes:
+            title:
+              blank: 'no puede ser vacío'
+              too_short: 'debe ser al menos de 6 caracteres'
+            context:
+              blank: 'no puede ser vacío'
+              too_short: 'debe ser al menos de 50  caracteres'
   time:
     formats:
       long: '%d de %B de %Y'
