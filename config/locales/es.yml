@@ -2,6 +2,7 @@ es:
   activerecord:
     models:
       admin_user: 'Usuario Administrador'
+      category: 'Categoría'
       notice: 'Noticia'
     attributes:
       admin_user:
@@ -10,6 +11,12 @@ es:
         current_sign_in_at: 'Conexión'
         sign_in_count: 'Cantidad de ingresos'
         updated_at: 'Ultima actualización'
+      category:
+        name: 'Nombre'
+        short_name: 'Sigla'
+        description: 'Descripción'
+        created_at: 'Fecha creación'
+        image: 'Logo'
       notice:
         title: 'Título'
         context: 'Contexto'
@@ -17,6 +24,16 @@ es:
         image: 'Imagen'
     errors:
       models:
+        category:
+          attributes:
+            name:
+              blank: 'no puede ser vacío'
+              too_short: 'debe ser al menos de 3 caracteres'
+            description:
+              blank: 'no puede ser vacío'
+              too_short: 'debe ser al menos de 50  caracteres'
+            image:
+              format: 'formato incorrecto'
         notice:
           attributes:
             title:
