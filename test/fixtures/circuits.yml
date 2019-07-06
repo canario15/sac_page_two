@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  location: MyString
+  description: MyText
+  large: MyString
+  map_position: MyString
+  video_url: MyString
+
+two:
+  name: MyString
+  location: MyString
+  description: MyText
+  large: MyString
+  map_position: MyString
+  video_url: MyString

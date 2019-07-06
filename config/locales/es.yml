@@ -3,6 +3,7 @@ es:
     models:
       admin_user: 'Usuario Administrador'
       category: 'Categoría'
+      circuit: 'Circuito'
       notice: 'Noticia'
     attributes:
       admin_user:
@@ -17,6 +18,16 @@ es:
         description: 'Descripción'
         created_at: 'Fecha creación'
         image: 'Logo'
+      circuit:
+        name: 'Nombre'
+        location: 'Ubicación'
+        description: 'Descripción'
+        large: 'Largo'
+        map_position: 'Mapa'
+        logo: 'Logo'
+        truck: 'Mapa Circuito'
+        video_url: 'Url video'
+        created_at: 'Fecha creación'
       notice:
         title: 'Título'
         context: 'Contexto'
@@ -34,6 +45,11 @@ es:
               too_short: 'debe ser al menos de 50  caracteres'
             image:
               format: 'formato incorrecto'
+        circuit:
+          attributes:
+            name:
+              blank: 'no puede ser vacío'
+              too_short: 'debe ser al menos de 3 caracteres'
         notice:
           attributes:
             title:
