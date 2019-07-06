@@ -1,5 +1,27 @@
 es:
   active_admin:
+    resources:
+      admin_user:
+        new_model: 'Nuevo Usuario'
+        edit_model: 'Editar Usuario'
+        delete_model: 'Borrar Usuario'
+      category:
+        new_model: 'Nueva Categoría'
+        edit_model: 'Editar Categoría'
+        delete_model: 'Borrar Categoría'
+      circuit:
+        new_model: 'Nuevo Circuito'
+        edit_model: 'Editar Circuito'
+        delete_model: 'Borrar Circuito'
+      notice:
+        new_model: 'Nueva Noticia'
+        edit_model: 'Editar Noticia'
+        delete_model: 'Borrar Noticia'
+      pilot:
+        new_model: 'Nuevo Piloto'
+        edit_model: 'Editar Piloto'
+        delete_model: 'Borrar Piloto'
+
     dashboard: Inicio
     dashboard_welcome:
       welcome: "Bienvenido a Active Admin. Esta es la página de inicio predeterminada."

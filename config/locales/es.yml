@@ -5,6 +5,7 @@ es:
       category: 'Categoría'
       circuit: 'Circuito'
       notice: 'Noticia'
+      pilot: 'Piloto'
     attributes:
       admin_user:
         email: 'Email'
@@ -33,6 +34,20 @@ es:
         context: 'Contexto'
         created_at: 'Fecha creación'
         image: 'Imagen'
+      pilot:
+        full_name: 'Nombre'
+        first_name: 'Nombre'
+        last_name: 'Apellido'
+        birth_date: 'Fecha Nac.'
+        city: 'Ciudad'
+        team: 'Equipo'
+        car: 'Auto'
+        active: 'Activo'
+        avatar: 'Foto Perfil'
+        car_pic: 'Foto del auto'
+        helmet_pic: 'Foto del casco'
+        complete_pic: 'Foto completa'
+
     errors:
       models:
         category:
@@ -60,6 +75,18 @@ es:
               too_short: 'debe ser al menos de 50  caracteres'
             image:
               format: 'formato incorrecto'
+        pilot:
+          attributes:
+            first_name:
+              blank: 'no puede ser vacío'
+            last_name:
+              blank: 'no puede ser vacío'
+            birth_date:
+              blank: 'no puede ser vacío'
+            city:
+              blank: 'no puede ser vacío'
+            car:
+              blank: 'no puede ser vacío'
   time:
     formats:
       long: '%d de %B de %Y'
