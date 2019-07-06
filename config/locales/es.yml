@@ -3,6 +3,7 @@ es:
     models:
       admin_user: 'Usuario Administrador'
       category: 'Categoría'
+      championship: 'Campeonato'
       circuit: 'Circuito'
       notice: 'Noticia'
       pilot: 'Piloto'
@@ -19,6 +20,13 @@ es:
         description: 'Descripción'
         created_at: 'Fecha creación'
         image: 'Logo'
+      championship:
+        name: 'Nombre'
+        year: 'Año'
+        one: 'Campeón'
+        two: 'Vicecamepón'
+        three: 'Tercero'
+        category: 'Categoría'
       circuit:
         name: 'Nombre'
         location: 'Ubicación'
@@ -60,6 +68,15 @@ es:
               too_short: 'debe ser al menos de 50  caracteres'
             image:
               format: 'formato incorrecto'
+        championship:
+          attributes:
+            name:
+              blank: 'no puede ser vacío'
+            year:
+              blank: 'no puede ser vacío'
+            category:
+              blank: 'no puede ser vacío'
+              required: 'es requerido'
         circuit:
           attributes:
             name:

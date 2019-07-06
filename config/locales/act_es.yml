@@ -9,6 +9,10 @@ es:
         new_model: 'Nueva Categoría'
         edit_model: 'Editar Categoría'
         delete_model: 'Borrar Categoría'
+      championship:
+        new_model: 'Nuevo Campeonato'
+        edit_model: 'Editar Campeonato'
+        delete_model: 'Borrar Campeonato'
       circuit:
         new_model: 'Nuevo Circuito'
         edit_model: 'Editar Circuito'
