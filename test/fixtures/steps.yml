@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  race: one
+  number: 1
+  name: MyString
+  observation: MyText
+
+two:
+  race: two
+  number: 1
+  name: MyString
+  observation: MyText

@@ -19,6 +19,10 @@ ActiveAdmin.register Race do
       f.input :city
       f.input :circuit
       f.input :name
+      f.has_many :steps, allow_destroy: true do |s|
+        s.input :number
+        s.input :name
+      end
       f.input :observation
     end
     f.actions
@@ -35,13 +39,21 @@ ActiveAdmin.register Race do
 
   show do
     attributes_table do
+      row :done
       row :id
       row :championship
       row :date
       row :city
       row :circuit
       row :name
-      row :done
+      row :steps do
+        table_for race.steps do
+          column :number
+          column :name
+          column('Acciones') { |step| link_to('Ver', admin_step_path(step)) }
+          column('') { |step| link_to('Editar', edit_admin_step_path(step)) }
+        end
+      end
       row :observation
     end
   end

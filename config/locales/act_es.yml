@@ -29,6 +29,10 @@ es:
         new_model: 'Nueva Fecha'
         edit_model: 'Editar Fecha'
         delete_model: 'Borrar Fecha'
+      step:
+        new_model: 'Nueva Serie'
+        edit_model: 'Editar Serie'
+        delete_model: 'Borrar Serie'
 
     dashboard: Inicio
     dashboard_welcome:
