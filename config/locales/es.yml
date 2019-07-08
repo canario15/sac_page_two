@@ -7,6 +7,7 @@ es:
       circuit: 'Circuito'
       notice: 'Noticia'
       pilot: 'Piloto'
+      race: 'Fecha'
     attributes:
       admin_user:
         email: 'Email'
@@ -27,6 +28,7 @@ es:
         two: 'Vicecamepón'
         three: 'Tercero'
         category: 'Categoría'
+        races: 'Fechas'
       circuit:
         name: 'Nombre'
         location: 'Ubicación'
@@ -55,7 +57,14 @@ es:
         car_pic: 'Foto del auto'
         helmet_pic: 'Foto del casco'
         complete_pic: 'Foto completa'
-
+      race:
+        championship: 'Campeonato'
+        circuit: 'Circuito'
+        name: 'Nombre'
+        date: 'Fecha'
+        city: 'Ciudad'
+        observation: 'Observaciones'
+        done: 'Finalizada'
     errors:
       models:
         category:
@@ -103,6 +112,18 @@ es:
             city:
               blank: 'no puede ser vacío'
             car:
+              blank: 'no puede ser vacío'
+        race:
+          attributes:
+            championship:
+              required: 'es requerido'
+            circuit:
+              required: 'es requerido'
+            city:
+              blank: 'no puede ser vacío'
+            date:
+              blank: 'no puede ser vacío'
+            name:
               blank: 'no puede ser vacío'
   time:
     formats:

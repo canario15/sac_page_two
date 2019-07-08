@@ -25,6 +25,10 @@ es:
         new_model: 'Nuevo Piloto'
         edit_model: 'Editar Piloto'
         delete_model: 'Borrar Piloto'
+      race:
+        new_model: 'Nueva Fecha'
+        edit_model: 'Editar Fecha'
+        delete_model: 'Borrar Fecha'
 
     dashboard: Inicio
     dashboard_welcome:
