@@ -7,6 +7,7 @@ es:
       circuit: 'Circuito'
       notice: 'Noticia'
       pilot: 'Piloto'
+      pilot_race: 'Inscripción'
       race: 'Fecha'
       step: 'Serie'
     attributes:
@@ -58,6 +59,11 @@ es:
         car_pic: 'Foto del auto'
         helmet_pic: 'Foto del casco'
         complete_pic: 'Foto completa'
+      pilot_race:
+        pilot: 'Piloto'
+        race: 'Fecha'
+        category: 'Categoría'
+        number: 'Número'
       race:
         championship: 'Campeonato'
         circuit: 'Circuito'
@@ -67,6 +73,7 @@ es:
         observation: 'Observaciones'
         done: 'Finalizada'
         steps: 'Series'
+        pilot_races: 'Pilotos Inscriptos'
       step:
         race: 'Fecha'
         name: 'Nombre'
@@ -120,6 +127,10 @@ es:
               blank: 'no puede ser vacío'
             car:
               blank: 'no puede ser vacío'
+        pilot_race:
+          attributes:
+            number:
+              blank: 'no puede ser vacío'
         race:
           attributes:
             championship:
@@ -132,12 +143,16 @@ es:
               blank: 'no puede ser vacío'
             name:
               blank: 'no puede ser vacío'
+            pilot_races:
+              required: 'es requerido'
         steps:
           attributes:
             name:
               blank: 'no puede ser vacío'
             number:
               blank: 'no puede ser vacío'
+            race:
+              required: 'es requerido'
   time:
     formats:
       long: '%d de %B de %Y'

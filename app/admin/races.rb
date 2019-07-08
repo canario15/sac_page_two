@@ -23,6 +23,11 @@ ActiveAdmin.register Race do
         s.input :number
         s.input :name
       end
+      f.has_many :pilot_races, allow_destroy: true do |p|
+        p.input :pilot, as: :select, collection: (resource.championship.category ? resource.championship.category.pilots.collect {|pilot| [pilot.full_name, pilot.id]} : [])
+        p.input :number
+      end
+
       f.input :observation
     end
     f.actions
@@ -52,6 +57,14 @@ ActiveAdmin.register Race do
           column :name
           column('Acciones') { |step| link_to('Ver', admin_step_path(step)) }
           column('') { |step| link_to('Editar', edit_admin_step_path(step)) }
+        end
+      end
+      row :pilot_races do
+        table_for race.pilot_races do
+          column :number
+          column :pilot
+          column('Acciones') { |pilot_race| link_to('Ver', admin_pilot_race_path(pilot_race)) }
+          column('') { |pilot_race| link_to('Editar', edit_admin_pilot_race_path(pilot_race)) }
         end
       end
       row :observation
