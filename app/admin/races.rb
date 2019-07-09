@@ -67,6 +67,16 @@ ActiveAdmin.register Race do
           column('') { |pilot_race| link_to('Editar', edit_admin_pilot_race_path(pilot_race)) }
         end
       end
+      row :race_results do
+        table_for race.race_results do
+          column :position
+          column('Numero')  { |pr| pr.pilot_race.number }
+          column('Piloto')  { |pr| pr.pilot_race.pilot  }
+          column :score
+          column :score_for_champ
+          column('') { |pr| link_to('setear', edit_admin_race_result_path(pr)) }
+        end
+      end
       row :observation
     end
   end

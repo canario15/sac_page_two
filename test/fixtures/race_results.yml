@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  score: 1
+  position: 1
+  score_for_champ: 1
+  pilot_race: one
+  race: one
+  pilot: one
+
+two:
+  score: 1
+  position: 1
+  score_for_champ: 1
+  pilot_race: two
+  race: two
+  pilot: two

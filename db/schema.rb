@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_08_021752) do
+ActiveRecord::Schema.define(version: 2019_07_08_234345) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -127,6 +127,20 @@ ActiveRecord::Schema.define(version: 2019_07_08_021752) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "race_results", force: :cascade do |t|
+    t.integer "score"
+    t.integer "position"
+    t.integer "score_for_champ"
+    t.bigint "pilot_race_id"
+    t.bigint "race_id"
+    t.bigint "pilot_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pilot_id"], name: "index_race_results_on_pilot_id"
+    t.index ["pilot_race_id"], name: "index_race_results_on_pilot_race_id"
+    t.index ["race_id"], name: "index_race_results_on_race_id"
+  end
+
   create_table "races", force: :cascade do |t|
     t.bigint "championship_id"
     t.string "city"
@@ -153,6 +167,9 @@ ActiveRecord::Schema.define(version: 2019_07_08_021752) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "championships", "categories"
+  add_foreign_key "race_results", "pilot_races"
+  add_foreign_key "race_results", "pilots"
+  add_foreign_key "race_results", "races"
   add_foreign_key "races", "championships"
   add_foreign_key "races", "circuits"
   add_foreign_key "steps", "races"

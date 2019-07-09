@@ -3,6 +3,7 @@ class Race < ApplicationRecord
   belongs_to :circuit
   has_many :steps
   has_many :pilot_races
+  has_many :race_results
 
   accepts_nested_attributes_for :steps, allow_destroy: true
   accepts_nested_attributes_for :pilot_races, allow_destroy: true

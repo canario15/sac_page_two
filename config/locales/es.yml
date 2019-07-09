@@ -10,6 +10,7 @@ es:
       pilot_race: 'Inscripción'
       race: 'Fecha'
       step: 'Serie'
+      race_result: 'Resultado de la fecha'
     attributes:
       admin_user:
         email: 'Email'
@@ -74,6 +75,14 @@ es:
         done: 'Finalizada'
         steps: 'Series'
         pilot_races: 'Pilotos Inscriptos'
+        race_results: 'Resultado'
+      race_result:
+        score: 'Puntaje'
+        position: 'Posición'
+        score_for_champ: 'Puntos para el campeonato'
+        race: 'Fecha'
+        pilot: 'Piloto'
+        pilot_race: 'Inscriptos'
       step:
         race: 'Fecha'
         name: 'Nombre'
@@ -144,6 +153,20 @@ es:
             name:
               blank: 'no puede ser vacío'
             pilot_races:
+              required: 'es requerido'
+        race_result:
+          attributes:
+            score:
+              blank: 'no puede ser vacío'
+            position:
+              blank: 'no puede ser vacío'
+            score_for_champ:
+              blank: 'no puede ser vacío'
+            race:
+              required: 'es requerido'
+            pilot:
+              required: 'es requerido'
+            pilot_race:
               required: 'es requerido'
         steps:
           attributes:
