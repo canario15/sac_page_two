@@ -7,6 +7,7 @@ es:
       circuit: 'Circuito'
       notice: 'Noticia'
       pilot: 'Piloto'
+      pilot_step: 'Resultado de la serie'
       pilot_race: 'Inscripción'
       race: 'Fecha'
       step: 'Serie'
@@ -60,6 +61,12 @@ es:
         car_pic: 'Foto del auto'
         helmet_pic: 'Foto del casco'
         complete_pic: 'Foto completa'
+      pilot_step:
+        score: 'Puntaje'
+        position: 'Posición'
+        time: 'Tiempo'
+        pilot_race: 'Pilot'
+        step: 'Serie'
       pilot_race:
         pilot: 'Piloto'
         race: 'Fecha'
@@ -140,6 +147,18 @@ es:
           attributes:
             number:
               blank: 'no puede ser vacío'
+        pilot_step:
+          attributes:
+            score:
+              blank: 'no puede ser vacío'
+            position:
+              blank: 'no puede ser vacío'
+            time:
+              blank: 'no puede ser vacío'
+            pilot_race:
+              required: 'es requerido'
+            step:
+              required: 'es requerido'
         race:
           attributes:
             championship:

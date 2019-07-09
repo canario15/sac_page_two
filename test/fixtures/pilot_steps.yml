@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  score: 1
+  position: 1
+  time: MyString
+  step: one
+  pilot_race: one
+
+two:
+  score: 1
+  position: 1
+  time: MyString
+  step: two
+  pilot_race: two
