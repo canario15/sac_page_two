@@ -1,17 +1,17 @@
 es:
   activerecord:
     models:
-      admin_user: 'Usuario Administrador'
-      category: 'Categoría'
+      admin_user: 'Usuarios Administradores'
+      category: 'Categorías'
       championship: 'Campeonato'
-      circuit: 'Circuito'
-      notice: 'Noticia'
-      pilot: 'Piloto'
+      circuit: 'Circuitos'
+      notice: 'Noticias'
+      pilot: 'Pilotos'
       pilot_step: 'Resultado de la serie'
-      pilot_race: 'Inscripción'
-      race: 'Fecha'
-      step: 'Serie'
-      race_result: 'Resultado de la fecha'
+      pilot_race: 'Pilotos Inscriptos'
+      race: 'Fechas'
+      step: 'Series'
+      race_result: 'Resultados de las fechas'
     attributes:
       admin_user:
         email: 'Email'
@@ -65,7 +65,7 @@ es:
         score: 'Puntaje'
         position: 'Posición'
         time: 'Tiempo'
-        pilot_race: 'Pilot'
+        pilot_race: 'Piloto'
         step: 'Serie'
       pilot_race:
         pilot: 'Piloto'
@@ -145,6 +145,8 @@ es:
               blank: 'no puede ser vacío'
         pilot_race:
           attributes:
+            pilot:
+              required: 'es requerido'
             number:
               blank: 'no puede ser vacío'
         pilot_step:
@@ -187,7 +189,7 @@ es:
               required: 'es requerido'
             pilot_race:
               required: 'es requerido'
-        steps:
+        step:
           attributes:
             name:
               blank: 'no puede ser vacío'
