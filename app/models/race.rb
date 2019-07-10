@@ -1,6 +1,7 @@
 class Race < ApplicationRecord
   belongs_to :championship
   belongs_to :circuit
+  has_one :category, through: :championship
   has_many :steps
   has_many :pilot_races
   has_many :race_results
@@ -16,4 +17,11 @@ class Race < ApplicationRecord
     "#{date} - #{name}"
   end
 
+  def posible_pilots
+    category.pilots.collect { |pilot| [pilot.full_name, pilot.id] }
+  end
+
+  def registered_pilots
+    pilot_races.collect { |pr| [pr , pr.id] }
+  end
 end

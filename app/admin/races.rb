@@ -6,14 +6,16 @@ ActiveAdmin.register Race do
 
   menu false
 
-  permit_params :city, :date, :name, :observation, :circuit_id, steps_attributes: [:id, :number, :name, :_destroy], pilot_races_attributes: [:id, :number, :pilot_id, :race_id]
+  permit_params :city, :date, :name, :observation, :circuit_id,
+                steps_attributes: [:id, :number, :name, :_destroy],
+                pilot_races_attributes: [:id, :number, :pilot_id, :race_id]
 
   action_item only: :show do
     link_to 'Cerrar Fecha', '#', class: 'close_race'
   end
 
   form do |f|
-    f.inputs 'Fecha' do
+    f.inputs do
       f.input :championship, input_html: { disabled: true }
       f.input :date, as: :datepicker
       f.input :city
@@ -24,16 +26,15 @@ ActiveAdmin.register Race do
         s.input :name
       end
       f.has_many :pilot_races, allow_destroy: true do |p|
-        p.input :pilot, as: :select, collection: (resource.championship.category ? resource.championship.category.pilots.collect {|pilot| [pilot.full_name, pilot.id]} : [])
+        p.input :pilot, as: :select, collection: resource.posible_pilots
         p.input :number
       end
-
       f.input :observation
     end
     f.actions
   end
 
-  index title: 'Fechas' do
+  index do
     column :championship
     column :date
     column :city

@@ -2,20 +2,21 @@ ActiveAdmin.register Championship do
   actions :index, :show, :edit, :update, :new, :create
 
   config.batch_actions = false
-  filter :category, collection: proc { Category.all }, as: :select
 
-  menu label: 'Campeonatos'
+  filter :category, collection: proc { Category.all }, as: :select
 
   config.sort_order = 'year_desc'
 
-  permit_params :name, :category_id, :circuit_id, :year, :one_id,
-                :two_id, :three_id, races_attributes: [:id, :city, :date, :name, :circuit_id, :_destroy]
+  permit_params :name, :category_id, :circuit_id, :year,
+                :one_id, :two_id, :three_id,
+                races_attributes: [:id, :city, :date, :name,
+                                     :circuit_id, :_destroy]
 
   form do |f|
-    f.inputs 'Campeonato' do
+    f.inputs do
       f.input :name
       f.input :year
-      f.input :category, as: :select, collection: Category.all.collect {|cat| [cat.name, cat.id] }
+      f.input :category
       f.input :one
       f.input :two
       f.input :three
@@ -29,7 +30,7 @@ ActiveAdmin.register Championship do
     f.actions
   end
 
-  index title: 'Campeonatos' do
+  index do
     column :name
     column :year
     column :category

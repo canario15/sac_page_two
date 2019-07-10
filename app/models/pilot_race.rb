@@ -5,4 +5,8 @@ class PilotRace < ApplicationRecord
 
   validates :number, presence: true
 
+  def to_s
+    "#{number} - #{pilot}"
+  end
+
 end
