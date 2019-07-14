@@ -1,7 +1,7 @@
 class Category < ApplicationRecord
 
   has_one_attached :image
-
+  has_many :sub_categories
   has_and_belongs_to_many :pilots
 
   validates :name, presence: true
@@ -9,5 +9,4 @@ class Category < ApplicationRecord
   validates :description, presence: true
   validates :description, length: { minimum: 50 }
   validate :image_format
-
 end
