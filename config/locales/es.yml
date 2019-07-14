@@ -1,17 +1,47 @@
 es:
+  support:
+    array:
+      words_connector: ', '
+      two_words_connector: ' y '
+      last_word_connector: ' y '
   activerecord:
     models:
-      admin_user: 'Usuarios Administradores'
-      category: 'Categorías'
-      championship: 'Campeonato'
-      circuit: 'Circuitos'
-      notice: 'Noticias'
-      pilot: 'Pilotos'
-      pilot_step: 'Resultado de la serie'
-      pilot_race: 'Pilotos Inscriptos'
-      race: 'Fechas'
-      step: 'Series'
-      race_result: 'Resultados de las fechas'
+      admin_user:
+        one: 'Usuario Administrador'
+        other: 'Usuarios Administradores'
+      category:
+        one: 'Categoría'
+        other: 'Categorías'
+      championship:
+        one: 'Campeonato'
+        other: 'Campeonatos'
+      circuit:
+        one: 'Circuito'
+        other: 'Circuitos'
+      notice:
+        one: 'Noticia'
+        other: 'Noticias'
+      pilot:
+        one: 'Piloto'
+        other: 'Pilotos'
+      pilot_step:
+        one: 'Resultado de la serie'
+        other: 'Resultado de la serie'
+      pilot_race:
+        one: 'Inscripción'
+        other: 'Pilotos Inscriptos'
+      race:
+        one: 'Fecha'
+        other: 'Fechas'
+      step:
+        one: 'Serie'
+        other: 'Series'
+      sub_category:
+        one: 'Sub Categoría'
+        other: 'Sub Categorías'
+      race_result:
+        one: 'Resultado de las fecha'
+        other: 'Resultados de las fechas'
     attributes:
       admin_user:
         email: 'Email'
@@ -19,10 +49,13 @@ es:
         current_sign_in_at: 'Conexión'
         sign_in_count: 'Cantidad de ingresos'
         updated_at: 'Ultima actualización'
+        password: 'Contraseña'
+        password_confirmation: 'Confirmar contraseña'
       category:
         name: 'Nombre'
         short_name: 'Sigla'
         description: 'Descripción'
+        sub_categories: 'Sub Categorías'
         created_at: 'Fecha creación'
         image: 'Logo'
       championship:
@@ -61,6 +94,7 @@ es:
         car_pic: 'Foto del auto'
         helmet_pic: 'Foto del casco'
         complete_pic: 'Foto completa'
+        categories: 'Categorías'
       pilot_step:
         score: 'Puntaje'
         position: 'Posición'
@@ -95,7 +129,11 @@ es:
         name: 'Nombre'
         number: 'Número'
         observation: 'Observaciones'
+      sub_category: 
+        name: 'Nombre'
+        category: 'Categoría'
     errors:
+      format: "%{attribute} %{message}"
       models:
         category:
           attributes:
@@ -196,6 +234,12 @@ es:
             number:
               blank: 'no puede ser vacío'
             race:
+              required: 'es requerido'
+        sub_category:
+          attributes:
+            name:
+              blank: 'no puede ser vacío'
+            category: 
               required: 'es requerido'
   time:
     formats:
