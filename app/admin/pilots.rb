@@ -1,4 +1,6 @@
 ActiveAdmin.register Pilot do
+  actions :index, :show, :edit, :update, :new, :create
+
   menu parent: 'Administración', label: 'Pilotos'
 
   config.batch_actions = false
@@ -12,7 +14,7 @@ ActiveAdmin.register Pilot do
                 :birth_date, category_ids: []
 
   form do |f|
-    f.inputs 'Piloto' do
+    f.inputs do
       f.input :active
       f.input :first_name
       f.input :last_name
@@ -29,17 +31,13 @@ ActiveAdmin.register Pilot do
     f.actions
   end
 
-  index title: 'Pilotos' do
-    column :full_name do |pilot|
-      pilot.full_name
-    end
+  index do
+    column :full_name
     column :birth_date
     column :city
     column :car
     column :team
-    column :categories  do |pilot|
-      (pilot.categories.map {|c| c.name }).join(', ')
-    end
+    column :categories
     column :active
     actions
   end
@@ -52,9 +50,7 @@ ActiveAdmin.register Pilot do
       row :city
       row :car
       row :team
-      row :categories do
-        (ad.categories.map { |c| c.name }).join(', ')
-      end
+      row :categories
       row :avatar do
         if ad.avatar.attached?
           image_tag ad.avatar.variant(resize: '200x200>')

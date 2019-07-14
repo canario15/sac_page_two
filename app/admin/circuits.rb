@@ -1,4 +1,6 @@
 ActiveAdmin.register Circuit do
+  actions :index, :show, :edit, :update, :new, :create
+
   menu parent: 'Administración', label: 'Circuitos'
 
   config.batch_actions = false
@@ -7,7 +9,7 @@ ActiveAdmin.register Circuit do
   permit_params :name, :location, :description, :large, :logo, :map_position, :video_url, :truck
 
   form do |f|
-    f.inputs 'Circuito' do
+    f.inputs do
       f.input :name
       f.input :location
       f.input :large
@@ -20,7 +22,7 @@ ActiveAdmin.register Circuit do
     f.actions
   end
 
-  index title: 'Circuitos' do
+  index do
     column :name
     column :location
     column :large

@@ -4,13 +4,14 @@ ActiveAdmin.register Championship do
   config.batch_actions = false
 
   filter :category, collection: proc { Category.all }, as: :select
+  filter :year, as: :select
 
   config.sort_order = 'year_desc'
 
   permit_params :name, :category_id, :circuit_id, :year,
                 :one_id, :two_id, :three_id,
                 races_attributes: [:id, :city, :date, :name,
-                                     :circuit_id, :_destroy]
+                                   :circuit_id, :_destroy]
 
   form do |f|
     f.inputs do
