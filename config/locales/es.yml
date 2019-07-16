@@ -65,6 +65,7 @@ es:
         two: 'Vicecamepón'
         three: 'Tercero'
         category: 'Categoría'
+        sub_category: 'Sub Categoría'
         races: 'Fechas'
       circuit:
         name: 'Nombre'

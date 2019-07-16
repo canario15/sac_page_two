@@ -12,4 +12,8 @@ Rails.application.routes.draw do
   get '/nosotros', to: 'pages#about', as: 'about'
   get '/contacto', to: 'pages#contact', as: 'contact'
 
+  get '/categorias/:id/sub_categories', to: 'categories#sub_categories',
+                                        as: :sub_categories
+  get '/categorias/:id/pilots', to: 'categories#pilots',
+                                as: :category_pilots
 end

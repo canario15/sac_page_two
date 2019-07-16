@@ -9,15 +9,14 @@ class Pilot < ApplicationRecord
 
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :birth_date, presence: true
   validates :city, presence: true
   validates :car, presence: true
 
-  def full_name
-    first_name + ' ' + last_name
-  end
+  after_validation :set_full_name, on: %i[create update]
 
-  def to_s
-    full_name
+  private
+
+  def set_full_name
+    self.full_name = first_name + ' ' + last_name
   end
 end

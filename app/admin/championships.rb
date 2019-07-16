@@ -8,16 +8,15 @@ ActiveAdmin.register Championship do
 
   config.sort_order = 'year_desc'
 
-  permit_params :name, :category_id, :circuit_id, :year,
-                :one_id, :two_id, :three_id,
-                races_attributes: [:id, :city, :date, :name,
-                                   :circuit_id, :_destroy]
-
+  permit_params :name, :category_id, :circuit_id, :year, :one_id, :two_id,
+                :three_id, :sub_category_id,
+                races_attributes: %i[id city date name circuit_id destroy]
   form do |f|
     f.inputs do
       f.input :name
       f.input :year
       f.input :category
+      f.input :sub_category
       f.input :one
       f.input :two
       f.input :three
@@ -35,6 +34,7 @@ ActiveAdmin.register Championship do
     column :name
     column :year
     column :category
+    column :sub_category
     column :one
     column :two
     column :three
@@ -46,6 +46,7 @@ ActiveAdmin.register Championship do
       row :name
       row :year
       row :category
+      row :sub_category
       row :one
       row :two
       row :three
