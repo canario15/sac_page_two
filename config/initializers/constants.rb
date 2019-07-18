@@ -13,4 +13,7 @@ CARS_LIST = ['VW Amazon',
              'VW Gol G4',
              'VW Parati',
              'VW Passat',
-             'VW Santana']
+             'VW Santana',
+             'Kart 125cc',
+             'Fórmula VW'
+            ]
