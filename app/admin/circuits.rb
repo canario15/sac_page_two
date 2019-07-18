@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-ctiveAdmin.register Circuit do
+ActiveAdmin.register Circuit do
   actions :index, :show, :edit, :update, :new, :create
 
   menu parent: 'Administración', label: 'Circuitos'
