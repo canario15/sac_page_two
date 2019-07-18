@@ -1,6 +1,8 @@
 //= require active_admin/base
 $(function() {
 
+  $('.flash').delay(5000).slideUp();
+
   $('#championship_category_id').change(function() {
     var category_id = $(this).val();
     $.ajax({
@@ -31,7 +33,18 @@ $(function() {
         $("select#championship_three_id").html(options);
       }
     });
-    
+  });
+
+  $(".close_race").click(function(e) {
+    race_id =  $(".row-id td").text();
+    e.preventDefault();
+    $.ajax({
+      type: 'PUT',
+      url: '/race/'+ race_id +'/close',
+      success: function (data) {
+        location.reload();
+      }
+    });
   });
 
 });

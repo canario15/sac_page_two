@@ -130,6 +130,7 @@ es:
         name: 'Nombre'
         number: 'Número'
         observation: 'Observaciones'
+        pilot_steps: 'Resultado'
       sub_category: 
         name: 'Nombre'
         category: 'Categoría'

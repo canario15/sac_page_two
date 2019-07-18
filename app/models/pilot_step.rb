@@ -6,4 +6,5 @@ class PilotStep < ApplicationRecord
   validates :position, presence: true
   validates :time, presence: true
 
+  default_scope { order(position: :asc) }
 end

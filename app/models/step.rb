@@ -7,4 +7,11 @@ class Step < ApplicationRecord
   validates :name, presence: true
   validates :number, presence: true
 
+  default_scope { order(number: :asc) }
+
+  after_update :update_race_results
+
+  def update_race_results
+    race.update_race_results
+  end
 end

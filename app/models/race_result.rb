@@ -4,7 +4,7 @@ class RaceResult < ApplicationRecord
   belongs_to :pilot
 
   validates :score, presence: true
-  validates :position, presence: true
   validates :score_for_champ, presence: true
 
+  default_scope { order(position: :asc) }
 end

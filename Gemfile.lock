@@ -65,6 +65,7 @@ GEM
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
+    awesome_print (1.8.0)
     babel-source (5.8.35)
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
@@ -284,6 +285,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin
+  awesome_print
   bootsnap (>= 1.1.0)
   byebug
   cancancan

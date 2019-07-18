@@ -16,6 +16,10 @@ class Pilot < ApplicationRecord
 
   after_validation :set_full_name, on: %i[create update]
 
+  def to_s
+    full_name
+  end
+
   private
 
   def set_full_name

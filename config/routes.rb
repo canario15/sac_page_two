@@ -14,6 +14,9 @@ Rails.application.routes.draw do
 
   get '/categorias/:id/sub_categories', to: 'categories#sub_categories',
                                         as: :sub_categories
+
   get '/categorias/:id/pilots', to: 'categories#pilots',
                                 as: :category_pilots
+
+  put '/race/:id/close', to: 'application#close_race', as: :close_race
 end
