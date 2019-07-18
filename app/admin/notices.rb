@@ -1,5 +1,6 @@
-ActiveAdmin.register Notice do
+# frozen_string_literal: true
 
+ActiveAdmin.register Notice do
   config.batch_actions = false
   config.filters = false
 

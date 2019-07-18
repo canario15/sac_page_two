@@ -1,4 +1,6 @@
-ActiveAdmin.register Circuit do
+# frozen_string_literal: true
+
+ctiveAdmin.register Circuit do
   actions :index, :show, :edit, :update, :new, :create
 
   menu parent: 'Administración', label: 'Circuitos'
@@ -6,7 +8,8 @@ ActiveAdmin.register Circuit do
   config.batch_actions = false
   config.filters = false
 
-  permit_params :name, :location, :description, :large, :logo, :map_position, :video_url, :truck
+  permit_params :name, :location, :description, :large, :logo, :map_position,
+                :video_url, :truck
 
   form do |f|
     f.inputs do
@@ -43,5 +46,4 @@ ActiveAdmin.register Circuit do
       end
     end
   end
-
 end

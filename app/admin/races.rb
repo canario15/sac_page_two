@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ActiveAdmin.register Race do
   actions :index, :edit, :show, :update
 
@@ -7,8 +9,8 @@ ActiveAdmin.register Race do
   menu false
 
   permit_params :city, :date, :name, :observation, :circuit_id,
-                steps_attributes: [:id, :number, :name, :_destroy],
-                pilot_races_attributes: [:id, :number, :pilot_id, :race_id]
+                steps_attributes: %i[id number name destroy],
+                pilot_races_attributes: %i[id number pilot_id race_id]
 
   action_item only: :show do
     link_to 'Cerrar Fecha', '#', class: 'close_race'
@@ -81,5 +83,4 @@ ActiveAdmin.register Race do
       row :observation
     end
   end
-
 end

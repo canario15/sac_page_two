@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ActiveAdmin.register Pilot do
   actions :index, :show, :edit, :update, :new, :create
 

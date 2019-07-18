@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ActiveAdmin.register Step do
   actions :index, :edit, :show, :update
 
@@ -6,8 +8,8 @@ ActiveAdmin.register Step do
 
   menu false
 
-  permit_params :observation, pilot_steps_attributes: [:id, :pilot_race_id, :position, :time,
-                :score, :_destroy]
+  permit_params :observation, pilot_steps_attributes:
+                %i[id pilot_race_id position time score _destroy]
 
   form do |f|
     f.inputs do
@@ -15,7 +17,8 @@ ActiveAdmin.register Step do
       f.input :number, input_html: { disabled: true }
       f.input :name, input_html: { disabled: true }
       f.has_many :pilot_steps, allow_destroy: true do |r|
-        r.input :pilot_race, as: :select, collection:  resource.race.registered_pilots
+        r.input :pilot_race, as: :select,
+                             collection: resource.race.registered_pilots
         r.input :time
         r.input :position
         r.input :score
