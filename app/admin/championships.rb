@@ -37,9 +37,6 @@ ActiveAdmin.register Championship do
     column :year
     column :category
     column :sub_category
-    column :one
-    column :two
-    column :three
     actions
   end
 

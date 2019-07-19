@@ -77,7 +77,6 @@ ActiveAdmin.register Race do
           column('Piloto')  { |pr| pr.pilot_race.pilot  }
           column :score
           column :score_for_champ
-          column('') { |pr| link_to('setear', edit_admin_race_result_path(pr)) }
         end
       end
       row :observation

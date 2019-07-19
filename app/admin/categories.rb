@@ -23,9 +23,7 @@ ActiveAdmin.register Category do
   index do
     column :name
     column :short_name
-    column :sub_categories do
-      sub_cat.sub_categories.call(&:name).join(', ')
-    end
+    column :sub_categories
     column :description do |category|
       truncate(category.description, omision: '...', length: 100)
     end
